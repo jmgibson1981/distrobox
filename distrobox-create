@@ -206,6 +206,7 @@ Options:
 				this will be useful to either rename an existing distrobox or have multiple copies
 				of the same environment.
 	--home/-H:		select a custom HOME directory for the container. Useful to avoid host's home littering with temp files.
+	--dbus:			adds host dbus connection to the container
 	--volume:		additional volumes to add to the container
 	--additional-flags/-a:	additional flags to pass to the container manager command
 	--additional-packages/-ap:	additional packages to install during initial container setup
@@ -381,6 +382,10 @@ while :; do
 				shift
 				shift
 			fi
+			;;
+		--dbus)
+			shift
+			container_manager_additional_flags="${container_manager_additional_flags} --env DBUS_SYSTEM_BUS_ADDRESS=unix:path=/var/run/host/var/run/dbus/system_bus_socket"
 			;;
 		-p | --pull)
 			container_always_pull=1
