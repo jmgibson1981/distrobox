@@ -76,7 +76,7 @@ graphical apps (X11/Wayland), and audio.
     - [distrobox-init](usage/distrobox-init.md)
   - [Configure distrobox](#configure-distrobox)
 - [Useful tips](useful_tips.md)
-  - [Launch a distrobox from you applications list](useful_tips.md#launch-a-distrobox-from-you-applications-list)
+  - [Launch a distrobox from your applications list](useful_tips.md#launch-a-distrobox-from-your-applications-list)
   - [Create a distrobox with a custom HOME directory](useful_tips.md#create-a-distrobox-with-a-custom-home-directory)
   - [Mount additional volumes in a distrobox](useful_tips.md#mount-additional-volumes-in-a-distrobox)
   - [Use a different shell than the host](useful_tips.md#use-a-different-shell-than-the-host)
@@ -193,7 +193,7 @@ Fedora Silverblue for the [uBlue](https://github.com/ublue-os) project
 ## Why
 
 - Provide a mutable environment on an immutable OS, like [ChromeOS, Endless OS,
-  Fedora Silverblue, OpenSUSE Aeon/Kalpa, Vanilla OS](compatibility.md#host-distros), or [SteamOS3](posts/steamdeck_guide.md)
+  Fedora Atomic Desktops (eg: Silverblue), OpenSUSE Aeon/Kalpa, Vanilla OS](compatibility.md#host-distros), or [SteamOS3](posts/steamdeck_guide.md)
 - Provide a locally privileged environment for sudoless setups
   (eg. company-provided laptops, security reasons, etc...)
 - To mix and match a stable base system (eg. Debian Stable, Ubuntu LTS, RedHat)

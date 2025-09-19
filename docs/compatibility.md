@@ -53,6 +53,7 @@ Distrobox has been successfully tested on:
 | Arch Linux | | `distrobox` is available in the `extra` repository and `distrobox-git` is available in the AUR (thanks [M0Rf30](https://github.com/M0Rf30)!). <br> To setup rootless podman, look [HERE](https://wiki.archlinux.org/title/Podman) |
 | Bazzite | 38 | `distrobox-git` is preinstalled. |
 | CentOS | 8 <br> 8 Stream <br> 9 Stream | `distrobox` is available in epel repos. (thanks [alcir](https://github.com/alcir)!) |
+| Chimera Linux | | `distrobox` is available in `chimera-repo-user`. |
 | ChromeOS | Debian 11 (docker with make-shared workaround #non-shared-mounts) <br> Debian 12 (podman) | using built-in Linux on ChromeOS mode which is debian-based, which can be [upgraded](https://wiki.debian.org/DebianUpgrade) from 11 bullseye to 12 bookworm (in fact 12 is recommended) |
 | Debian | 11 <br> 12 <br> Testing <br> Unstable | `distrobox` is available in default repos starting from version 12 (thanks [michel-slm!](https://github.com/michel-slm!)!) |
 | deepin | 23 <br> Testing <br> Unstable | `distrobox` is available in default repos in `testing` and `unstable` |
@@ -118,36 +119,37 @@ Distrobox guests tested successfully with the following container images:
 | Alpine (Toolbox) | 3.16 <br> 3.17 <br> 3.18 <br> 3.19 <br> 3.20 <br> edge | quay.io/toolbx-images/alpine-toolbox:3.16 <br> quay.io/toolbx-images/alpine-toolbox:3.17 <br> quay.io/toolbx-images/alpine-toolbox:3.18 <br> quay.io/toolbx-images/alpine-toolbox:3.19 <br> quay.io/toolbx-images/alpine-toolbox:3.20 <br> quay.io/toolbx-images/alpine-toolbox:edge <br> quay.io/toolbx-images/alpine-toolbox:latest |
 | AmazonLinux (Toolbox) | 2 <br> 2022 | quay.io/toolbx-images/amazonlinux-toolbox:2 <br> quay.io/toolbx-images/amazonlinux-toolbox:2023 <br> quay.io/toolbx-images/amazonlinux-toolbox:latest |
 | Archlinux (Toolbox) | | quay.io/toolbx/arch-toolbox:latest |
+| Alt Linux | p10 <br> p11 <br> sisyphus | docker.io/library/alt:p10 <br> docker.io/library/alt:p11 <br> docker.io/library/alt:sisyphus |
 | Bazzite Arch | | ghcr.io/ublue-os/bazzite-arch:latest <br> ghcr.io/ublue-os/bazzite-arch-gnome:latest |
 | Centos (Toolbox) | stream8 <br> stream9 | quay.io/toolbx-images/centos-toolbox:stream8 <br> quay.io/toolbx-images/centos-toolbox:stream9 <br> quay.io/toolbx-images/centos-toolbox:latest |
-| Debian (Toolbox) | 10 <br> 11 <br> 12 <br> testing <br> unstable <br> | quay.io/toolbx-images/debian-toolbox:10 <br> quay.io/toolbx-images/debian-toolbox:11 <br> quay.io/toolbx-images/debian-toolbox:12 <br> quay.io/toolbx-images/debian-toolbox:testing <br> quay.io/toolbx-images/debian-toolbox:unstable <br> quay.io/toolbx-images/debian-toolbox:latest |
-| Fedora (Toolbox) | 37 <br> 38 <br> 39 <br> 40 <br> 41 <br> Rawhide | registry.fedoraproject.org/fedora-toolbox:37 <br> registry.fedoraproject.org/fedora-toolbox:38 <br> registry.fedoraproject.org/fedora-toolbox:39 <br> registry.fedoraproject.org/fedora-toolbox:40 <br> quay.io/fedora/fedora-toolbox:41 <br> quay.io/fedora/fedora-toolbox:rawhide |
+| Debian (Toolbox) | 11 <br> 12 <br> 13 <br> testing <br> unstable <br> | quay.io/toolbx-images/debian-toolbox:11 <br> quay.io/toolbx-images/debian-toolbox:12 <br> quay.io/toolbx-images/debian-toolbox:13 <br> quay.io/toolbx-images/debian-toolbox:testing <br> quay.io/toolbx-images/debian-toolbox:unstable <br> quay.io/toolbx-images/debian-toolbox:latest |
+| Fedora (Toolbox) | 37 <br> 38 <br> 39 <br> 40 <br> 41 <br> 42 <br> Rawhide | registry.fedoraproject.org/fedora-toolbox:37 <br> registry.fedoraproject.org/fedora-toolbox:38 <br> registry.fedoraproject.org/fedora-toolbox:39 <br> registry.fedoraproject.org/fedora-toolbox:40 <br> quay.io/fedora/fedora-toolbox:41 <br> quay.io/fedora/fedora-toolbox:42 <br> quay.io/fedora/fedora-toolbox:rawhide |
 | openSUSE (Toolbox) | | registry.opensuse.org/opensuse/distrobox:latest |
 | RedHat (Toolbox) | 8 <br> 9 | registry.access.redhat.com/ubi8/toolbox <br> registry.access.redhat.com/ubi9/toolbox |
 | Rocky Linux (Toolbox) | 8 <br> 9 | quay.io/toolbx-images/rockylinux-toolbox:8 <br> quay.io/toolbx-images/rockylinux-toolbox:9 <br> quay.io/toolbx-images/rockylinux-toolbox:latest |
 | Ubuntu (Toolbox) | 16.04 <br> 18.04 <br> 20.04 <br> 22.04 <br> 24.04 | quay.io/toolbx/ubuntu-toolbox:16.04 <br> quay.io/toolbx/ubuntu-toolbox:18.04 <br> quay.io/toolbx/ubuntu-toolbox:20.04 <br> quay.io/toolbx/ubuntu-toolbox:22.04 <br> quay.io/toolbx/ubuntu-toolbox:24.04 <br> quay.io/toolbx/ubuntu-toolbox:latest |
 | Chainguard Wolfi (Toolbox) | | quay.io/toolbx-images/wolfi-toolbox:latest |
-| Ublue | bluefin-cli <br> ubuntu-toolbox <br> fedora-toolbox <br> wolfi-toolbox <br> archlinux-distrobox <br> powershell-toolbox | ghcr.io/ublue-os/bluefin-cli <br> ghcr.io/ublue-os/bluefin-cli <br> ghcr.io/ublue-os/ubuntu-toolbox <br> ghcr.io/ublue-os/fedora-toolbox <br> ghcr.io/ublue-os/wolfi-toolbox <br> ghcr.io/ublue-os/arch-distrobox <br> ghcr.io/ublue-os/powershell-toolbox |
+| Ublue | bluefin-cli <br> ubuntu-toolbox <br> fedora-toolbox <br> wolfi-toolbox <br> archlinux-distrobox <br> powershell-toolbox | ghcr.io/ublue-os/bluefin-cli <br> ghcr.io/ublue-os/bluefin-cli <br> ghcr.io/ublue-os/ubuntu-toolbox <br> ghcr.io/ublue-os/fedora-toolbox <br> ghcr.io/ublue-os/wolfi-toolbox <br> ghcr.io/ublue-os/arch-toolbox <br> ghcr.io/ublue-os/powershell-toolbox |
 |  |  |  |
 | AlmaLinux | 8 <br> 8-minimal <br> 9 <br> 9-minimal | docker.io/library/almalinux:8 <br> docker.io/library/almalinux:9  |
 | Alpine Linux    | 3.15 <br> 3.16 <br> 3.17 <br> 3.18 <br> 3.19 <br> 3.20 <br> edge | docker.io/library/alpine:3.15 <br> docker.io/library/alpine:3.16 <br> docker.io/library/alpine:3.17 <br> docker.io/library/alpine:3.18 <br> docker.io/library/alpine:3.19 <br> docker.io/library/alpine:3.20 <br> docker.io/library/alpine:edge <br> docker.io/library/alpine:latest |
 | AmazonLinux | 1 <br> 2 <br> 2023 | public.ecr.aws/amazonlinux/amazonlinux:1 <br> public.ecr.aws/amazonlinux/amazonlinux:2 <br>  public.ecr.aws/amazonlinux/amazonlinux:2023 |
 | Archlinux     | | docker.io/library/archlinux:latest    |
 | Blackarch     | | docker.io/blackarchlinux/blackarch:latest    |
-| CentOS Stream | 8 <br> 9 | quay.io/centos/centos:stream8 <br> quay.io/centos/centos:stream9  |
+| CentOS Stream | 8 <br> 9 <br> 10 | quay.io/centos/centos:stream8 <br> quay.io/centos/centos:stream9 <br> quay.io/centos/centos:stream10  |
 | Chainguard Wolfi | | cgr.dev/chainguard/wolfi-base:latest |
-| ClearLinux |      | docker.io/library/clearlinux:latest <br> docker.io/library/clearlinux:base    |
+| Chimera Linux | | docker.io/chimeralinux/chimera:latest |
 | Crystal Linux | | registry.gitlab.com/crystal-linux/misc/docker:latest  |
-| Debian | 7 <br> 8 <br> 9 <br> 10 <br> 11 <br> 12 | docker.io/debian/eol:wheezy <br> docker.io/library/debian:buster <br> docker.io/library/debian:bullseye-backports <br> docker.io/library/debian:bookworm-backports <br> docker.io/library/debian:stable-backports |
+| Debian | 7 <br> 8 <br> 9 <br> 10 <br> 11 <br> 12 <br> 13 | docker.io/debian/eol:wheezy <br> docker.io/debian/eol:buster <br> docker.io/debian/eol:bullseye <br> docker.io/library/debian:bookworm-backports <br> docker.io/library/debian:stable-backports |
 | Debian | Testing    | docker.io/library/debian:testing  <br>  docker.io/library/debian:testing-backports    |
 | Debian | Unstable | docker.io/library/debian:unstable    |
 | deepin | 20 (apricot) <br> 23 (beige) | docker.io/linuxdeepin/apricot <br> docker.io/linuxdeepin/deepin:beige |
-| Fedora | 36 <br> 37 <br> 38 <br> 39 <br> 40 <br> 41 <br> Rawhide | quay.io/fedora/fedora:36 <br> quay.io/fedora/fedora:37 <br> quay.io/fedora/fedora:38 <br> quay.io/fedora/fedora:39 <br> quay.io/fedora/fedora:40 <br> quay.io/fedora/fedora:41 <br> quay.io/fedora/fedora:rawhide  |
+| Fedora | 36 <br> 37 <br> 38 <br> 39 <br> 40 <br> 41 <br> 42 <br> Rawhide | quay.io/fedora/fedora:36 <br> quay.io/fedora/fedora:37 <br> quay.io/fedora/fedora:38 <br> quay.io/fedora/fedora:39 <br> quay.io/fedora/fedora:40 <br> quay.io/fedora/fedora:41 <br> quay.io/fedora/fedora:42 <br> quay.io/fedora/fedora:rawhide  |
 | Gentoo Linux | rolling | docker.io/gentoo/stage3:latest |
 | KDE neon | Latest | invent-registry.kde.org/neon/docker-images/plasma:latest |
 | Kali Linux | rolling | docker.io/kalilinux/kali-rolling:latest |
 | Mint | 21.1 | docker.io/linuxmintd/mint21.1-amd64 |
-| Neurodebian | nd100 | docker.io/library/neurodebian:nd100 |
+| Neurodebian | nd120 | docker.io/library/neurodebian:nd120 |
 | openSUSE | Leap | registry.opensuse.org/opensuse/leap:latest    |
 | openSUSE | Tumbleweed | registry.opensuse.org/opensuse/distrobox:latest  <br> registry.opensuse.org/opensuse/tumbleweed:latest  <br>  registry.opensuse.org/opensuse/toolbox:latest <br> registry.opensuse.org/opensuse/distrobox-bpftrace:latest   |
 | Oracle Linux | 7 <br> 7-slim <br> 8 <br> 8-slim <br> 9 <br> 9-slim |container-registry.oracle.com/os/oraclelinux:7 <br> container-registry.oracle.com/os/oraclelinux:7-slim <br> container-registry.oracle.com/os/oraclelinux:8 <br> container-registry.oracle.com/os/oraclelinux:8-slim <br> container-registry.oracle.com/os/oraclelinux:9 <br> container-registry.oracle.com/os/oraclelinux:9-slim  |

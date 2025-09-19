@@ -1,7 +1,7 @@
 '\" t
 .\
 .\"
-.TH "DISTROBOX\-ASSEMBLE" "1" "Apr 2025" "Distrobox" "User Manual"
+.TH "DISTROBOX\-ASSEMBLE" "1" "Sep 2025" "Distrobox" "User Manual"
 .SH NAME
 .IP
 .EX
@@ -279,6 +279,14 @@ T}@T{
 Specify if the container is rootful (default: false)
 T}
 T{
+unshare_groups
+T}@T{
+bool
+T}@T{
+Specify if the container should unshare users additional groups
+(default: false)
+T}
+T{
 unshare_ipc
 T}@T{
 bool
@@ -385,4 +393,12 @@ root=false
 replace=true
 start_now=true
 pre_init_hooks=curl \-fsSL https://bun.sh/install | bash;
+.EE
+.PP
+\f[B]Custom login shell example\f[R]
+.IP
+.EX
+[ubuntu]
+image=ubuntu:latest
+pre_init_hooks=\[dq]export SHELL=/bin/bash;\[dq]
 .EE

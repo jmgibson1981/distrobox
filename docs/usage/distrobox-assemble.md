@@ -138,6 +138,7 @@ declared multiple times to be compounded:
 | nvidia | bool | Specify if you want to enable NVidia drivers integration (default: false) |
 | pull | bool | Specify if you want to pull the image every time (default: false) |
 | root | bool | Specify if the container is rootful (default: false) |
+| unshare_groups | bool | Specify if the container should unshare users additional groups (default: false) |
 | unshare_ipc | bool | Specify if the container should unshare the ipc namespace (default: false) |
 | unshare_netns | bool | Specify if the container should unshare the network namespace (default: false) |
 | unshare_process | bool | Specify if the container should unshare the process (pid) namespace (default: false) |
@@ -206,3 +207,9 @@ each option corresponds to one of the `create` flags.
 	replace=true
 	start_now=true
 	pre_init_hooks=curl -fsSL https://bun.sh/install | bash;
+
+**Custom login shell example**
+
+	[ubuntu]
+	image=ubuntu:latest
+	pre_init_hooks="export SHELL=/bin/bash;"

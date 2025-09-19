@@ -9,6 +9,7 @@
   - [Duplicate an existing distrobox](#duplicate-an-existing-distrobox)
   - [Export to the host](#export-to-the-host)
   - [Execute commands on the host](#execute-commands-on-the-host)
+  <!-- markdownlint-disable-next-line MD051 -->
   - [Resolve "Error cannot open display: :0"](#resolve-error-cannot-open-display-0)
   - [Using init system inside a distrobox](#using-init-system-inside-a-distrobox)
   - [Using Docker inside a Distrobox](#using-docker-inside-a-distrobox)
@@ -83,6 +84,13 @@ If you want a different one you can use:
 ```sh
 SHELL=/bin/zsh distrobox create -n test
 SHELL=/bin/zsh distrobox enter test
+```
+
+If you want to declaratively set a custom shell for each container when using `distrobox assemble`,
+you can achieve this by using the `pre_init_hooks` option. For example:
+
+```ini
+pre_init_hooks="export SHELL=/bin/bash;"
 ```
 
 ## Run the container with real root
@@ -567,10 +575,10 @@ Then you can easily run the image you like:
 ```console
 ~$ uname -m
 x86_64
-~$ distrobox create -i aarch64/fedora -n fedora-arm64
-~$ distrobox enter fedora-arm64
+~$ distrobox create --image debian --additional-flags  --platform=linux/aarch64 -n debian-arm64
+~$ distrobox enter debian-arm64
 ...
-user@fedora-arm64:~$ uname -m
+user@debian-arm64:~$ uname -m
 aarch64
 ```
 
