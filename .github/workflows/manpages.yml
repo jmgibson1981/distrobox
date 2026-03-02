@@ -28,7 +28,7 @@ jobs:
           ref: main
           persist-credentials: false
           fetch-depth: 2
-          token: ${{ secrets.PAT }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       # Fetch from compatibility table all the distros supported
       - id: check_file_changed
@@ -43,6 +43,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: check_changes
     if: needs.check_changes.outputs.distrobox_changed == 'True'
+    permissions:
+      contents: write
     steps:
 
       - uses: actions/checkout@v6

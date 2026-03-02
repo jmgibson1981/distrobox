@@ -1,7 +1,7 @@
 '\" t
 .\
 .\"
-.TH "DISTROBOX" "1" "Nov 2025" "Distrobox" "User Manual"
+.TH "DISTROBOX" "1" "Feb 2026" "Distrobox" "User Manual"
 .SH COMPATIBILITY
 This project \f[B]does not need a dedicated image\f[R].
 It can use any OCI images from docker\-hub, quay.io, or any registry of
@@ -79,13 +79,11 @@ T}
 T{
 Alpine (Toolbox)
 T}@T{
-3.16  3.17  3.18  3.19  3.20  edge
+3.20  3.21  3.22  edge
 T}@T{
-quay.io/toolbx\-images/alpine\-toolbox:3.16 
-quay.io/toolbx\-images/alpine\-toolbox:3.17 
-quay.io/toolbx\-images/alpine\-toolbox:3.18 
-quay.io/toolbx\-images/alpine\-toolbox:3.19 
 quay.io/toolbx\-images/alpine\-toolbox:3.20 
+quay.io/toolbx\-images/alpine\-toolbox:3.21 
+quay.io/toolbx\-images/alpine\-toolbox:3.22 
 quay.io/toolbx\-images/alpine\-toolbox:edge 
 quay.io/toolbx\-images/alpine\-toolbox:latest
 T}
@@ -122,10 +120,10 @@ T}
 T{
 Centos (Toolbox)
 T}@T{
-stream8  stream9
+stream9  stream10
 T}@T{
-quay.io/toolbx\-images/centos\-toolbox:stream8 
 quay.io/toolbx\-images/centos\-toolbox:stream9 
+quay.io/toolbx\-images/centos\-toolbox:stream10 
 quay.io/toolbx\-images/centos\-toolbox:latest
 T}
 T{
@@ -143,13 +141,13 @@ T}
 T{
 Fedora (Toolbox)
 T}@T{
-37  38  39  40  41  42  Rawhide
+38  39  40  41  42  43  Rawhide
 T}@T{
-registry.fedoraproject.org/fedora\-toolbox:37 
 registry.fedoraproject.org/fedora\-toolbox:38 
 registry.fedoraproject.org/fedora\-toolbox:39 
 registry.fedoraproject.org/fedora\-toolbox:40 
 quay.io/fedora/fedora\-toolbox:41  quay.io/fedora/fedora\-toolbox:42 
+quay.io/fedora/fedora\-toolbox:43 
 quay.io/fedora/fedora\-toolbox:rawhide
 T}
 T{
@@ -196,13 +194,10 @@ T}
 T{
 Ublue
 T}@T{
-bluefin\-cli  ubuntu\-toolbox  fedora\-toolbox  wolfi\-toolbox 
-archlinux\-distrobox  powershell\-toolbox
+ubuntu\-toolbox  fedora\-toolbox  wolfi\-toolbox  archlinux\-distrobox
 T}@T{
-ghcr.io/ublue\-os/bluefin\-cli  ghcr.io/ublue\-os/bluefin\-cli 
 ghcr.io/ublue\-os/ubuntu\-toolbox  ghcr.io/ublue\-os/fedora\-toolbox 
-ghcr.io/ublue\-os/wolfi\-toolbox  ghcr.io/ublue\-os/arch\-toolbox 
-ghcr.io/ublue\-os/powershell\-toolbox
+ghcr.io/ublue\-os/wolfi\-toolbox  ghcr.io/ublue\-os/arch\-toolbox
 T}
 T{
 T}@T{
@@ -218,12 +213,11 @@ T}
 T{
 Alpine Linux
 T}@T{
-3.15  3.16  3.17  3.18  3.19  3.20  edge
+3.20  3.21  3.22  edge
 T}@T{
-docker.io/library/alpine:3.15  docker.io/library/alpine:3.16 
-docker.io/library/alpine:3.17  docker.io/library/alpine:3.18 
-docker.io/library/alpine:3.19  docker.io/library/alpine:3.20 
-docker.io/library/alpine:edge  docker.io/library/alpine:latest
+docker.io/library/alpine:3.20  docker.io/library/alpine:3.21 
+docker.io/library/alpine:3.22  docker.io/library/alpine:edge 
+docker.io/library/alpine:latest
 T}
 T{
 AmazonLinux
@@ -307,12 +301,12 @@ T}
 T{
 Fedora
 T}@T{
-36  37  38  39  40  41  42  Rawhide
+38  39  40  41  42  43  Rawhide
 T}@T{
-quay.io/fedora/fedora:36  quay.io/fedora/fedora:37 
 quay.io/fedora/fedora:38  quay.io/fedora/fedora:39 
 quay.io/fedora/fedora:40  quay.io/fedora/fedora:41 
-quay.io/fedora/fedora:42  quay.io/fedora/fedora:rawhide
+quay.io/fedora/fedora:42   quay.io/fedora/fedora:43 
+quay.io/fedora/fedora:rawhide
 T}
 T{
 Gentoo Linux
@@ -338,9 +332,9 @@ T}
 T{
 Mint
 T}@T{
-21.1
+22.3
 T}@T{
-docker.io/linuxmintd/mint21.1\-amd64
+docker.io/linuxmintd/mint22.3\-amd64
 T}
 T{
 Neurodebian
@@ -369,14 +363,14 @@ T}
 T{
 Oracle Linux
 T}@T{
-7  7\-slim  8  8\-slim  9  9\-slim
+8  8\-slim  9  9\-slim  10  10\-slim
 T}@T{
-container\-registry.oracle.com/os/oraclelinux:7 
-container\-registry.oracle.com/os/oraclelinux:7\-slim 
 container\-registry.oracle.com/os/oraclelinux:8 
 container\-registry.oracle.com/os/oraclelinux:8\-slim 
 container\-registry.oracle.com/os/oraclelinux:9 
-container\-registry.oracle.com/os/oraclelinux:9\-slim
+container\-registry.oracle.com/os/oraclelinux:9\-slim 
+container\-registry.oracle.com/os/oraclelinux:10 
+container\-registry.oracle.com/os/oraclelinux:10\-slim
 T}
 T{
 RedHat (UBI)
